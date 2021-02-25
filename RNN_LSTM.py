@@ -325,11 +325,11 @@ if BUILD_NEW_MODELS:
             if j == 0:
                 opt = Adam(lr=0.001, decay=1e-6)
                 opt_Name = 'ADAM'
-                epochs = 1000
+                epochs = 30
             else:
                 opt = SGD(lr=1e-5, decay=1e-6)
                 opt_Name = 'SGD'
-                epochs = 1000
+                epochs = 30
 
             # Compile and Train
             model.compile(loss='categorical_crossentropy', optimizer=opt,
@@ -343,7 +343,7 @@ if BUILD_NEW_MODELS:
             checkpointer = ModelCheckpoint(filepath=fileName, monitor='val_accuracy',
                                            mode='max', verbose=0, save_best_only=True)  # save best model
             earlyStop = EarlyStopping(
-                monitor='loss', min_delta=1e-4, patience=90, mode='min', restore_best_weights=True)
+                monitor='loss', min_delta=1e-3, patience=7, mode='min', restore_best_weights=True)
             print(f'\n\n\n\n\n')
             print(f'Model saved at {fileName}')
             print(
