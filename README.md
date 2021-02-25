@@ -6,4 +6,4 @@ In this project, the objective is to create an A.I. model that will be capable o
 the last X minutes of price data and predicting Y minutes into the future.
 
 This is a student project and should not be used in the real world, this is simply to learn and
-demonstrate what I have learned to potential employers.
+demonstrate skills I have aquired during the project to potential employers.
