@@ -1,0 +1,8 @@
+project_env
+
+# I paid $40 for the data, so I can't just give it out for free
+Data/__pycache__
+Data/SymbolData/*
+Data/SequenceData
+
+Data/ModelStorage
